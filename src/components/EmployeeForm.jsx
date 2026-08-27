@@ -142,7 +142,7 @@ const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
                         <div>
                             <label className="block mb-2">Temporary Password</label>
                             <input type="password" name="password" required pattern="^.{8}$"
-                                maxLength={8} onChange={(e) => {
+                                maxLength={8} minLength={8} onChange={(e) => {
                                     e.target.value = e.target.value.slice(0, 8);
                                 }} />
                         </div>
@@ -151,7 +151,7 @@ const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
                         <div>
                             <label>Change Password (Optional)</label>
                             <input type="password" name="password" pattern="^.{8}$"
-                                maxLength={8} onChange={(e) => {
+                                maxLength={8} minLength={8} onChange={(e) => {
                                     e.target.value = e.target.value.slice(0, 8);
                                 }} />
                         </div>

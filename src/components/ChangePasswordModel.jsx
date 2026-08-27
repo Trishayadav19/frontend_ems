@@ -52,11 +52,11 @@ const ChangePasswordModel = ({open, onClose}) => {
                 )}
                 <div>
                     <label className='block text-sm font-medium text-slate-700 mb-2'>Current Password</label>
-                    <input type="password" name="currentPassword" required/>
+                    <input type="password" name="currentPassword" required minLength={8} maxLength={8}/>
                 </div>
                 <div>
                     <label className='block text-sm font-medium text-slate-700 mb-2'>New Password</label>
-                    <input type="password" name="newPassword" required minLength={8}/>
+                    <input type="password" name="newPassword" required minLength={8} maxLength={8}/>
                 </div>
                 <div className='flex gap-3 pt-2'>
                     <button type='button' onClick={onClose} className='btn-secondary flex-1'>
